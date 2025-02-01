@@ -1,42 +1,87 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/dist/styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/dist/styles.css" />
     <title>Restauracja</title>
-</head>
-<body class="font-Funnel">
-    <aside class="fixed right-0 top-0">
-
-    </aside>
-    <div class="min-h-full grid grid-rows-3">
-        <nav class="h-[42%] p-1 w-full flex bg-yellow-500 items-center justify-between">
-            <img 
-            class="h-[90%]"
-            src="images/pasta-e-basta-high-resolution-logo.png" 
-            alt="Pasta e basta"
-            >
-            <button
-            class="h-[70%]"
-            >
-                <img 
-                class="h-[100%]"
-                src="images/menu_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg" 
-                alt="menu"
-                >
+  </head>
+  <body class="font-Funnel">
+    <div class="grid h-full min-h-full w-full min-w-full">
+      <nav
+        class="sticky top-0 z-10 flex h-[9vh] w-full items-center justify-between bg-yellow-500 p-1"
+      >
+        <img
+          class="h-[90%]"
+          src="images/pasta-e-basta-high-resolution-logo.png"
+          alt="Pasta e basta"
+        />
+        <button class="h-[70%]">
+          <img
+            class="h-[100%]"
+            src="images/menu_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg"
+            alt="menu"
+          />
         </button>
-        </nav>
-        <main>
-            <div id="photo">
-                <img class="h-[10%] w-[10%]" src="images/nicholas-grande-d9jcPTRD9fo-unsplash.jpg" alt="Makaron">
+      </nav>
+      <aside class="sticky top-0 right-0"></aside>
+      <main class="grid">
+        <div id="photo" class="relative">
+          <img
+            class=""
+            src="images/aleksandra-tanasiienko-0y6eMd8vevA-unsplash.jpg"
+            alt="Makaron"
+          />
+          <div
+            id="photoText"
+            class="absolute top-0 left-0 mt-20  w-full text-center"
+          >
+            <h2 class="text-center text-2xl font-bold text-neutral-200">
+              Witamy w restauracji Pasta e Basta
+            </h2>
+          </div>
+          <div
+            id="credit"
+            class="absolute right-4 bottom-2 text-xs text-gray-100"
+          >
+            Photo by
+            <a
+              href="https://unsplash.com/@tasikola_pl?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+              >Aleksandra Tanasiienko</a
+            >
+          </div>
+        </div>
+        <div id="hours" class="flex flex-col items-center justify-center text-center bg-amber-400 text-2xl">
+            <h3 class="text-amber-700">Godziny Otwarcia</h3>
+            <div class="text-lg text-yellow-50">
+                <h4>Poniedziałek - Czwartek 09:00-23:00</h4>
+                <h4>Piątek - Niedziela 12:00-00:00</h4>
             </div>
-        </main>
-        <footer>
-            footer
-        </footer>
+        </div>
+      </main>
+      <footer
+        class="flex items-center justify-center bg-neutral-500 text-center"
+      >
+        <div>
+          <p>&#169; 2025 Pasta e Basta</p>
+          <ul class="mt-2 flex justify-center space-x-6">
+            <li>
+              <a href="" class="transition-colors hover:text-gray-200">O nas</a>
+            </li>
+            <li>
+              <a href="" class="transition-colors hover:text-gray-200"
+                >Polityka prywatności</a
+              >
+            </li>
+          </ul>
+        </div>
+      </footer>
     </div>
-</body>
+  </body>
+</html>
