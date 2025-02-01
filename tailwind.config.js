@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {      
       fontFamily: {
-      Funnel: ['Funnel', 'sans-serif'],
+      Funnel: ["Funnel Sans", 'serif'],
     },},
   },
   plugins: [require('tailwindcss-motion')], 

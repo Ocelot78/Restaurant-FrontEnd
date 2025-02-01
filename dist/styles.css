@@ -980,32 +980,12 @@ video {
   position: fixed;
 }
 
+.right-0 {
+  right: 0px;
+}
+
 .top-0 {
   top: 0px;
-}
-
-.col-start-2 {
-  grid-column-start: 2;
-}
-
-.col-start-3 {
-  grid-column-start: 3;
-}
-
-.row-start-2 {
-  grid-row-start: 2;
-}
-
-.row-start-3 {
-  grid-row-start: 3;
-}
-
-.mt-3 {
-  margin-top: 0.75rem;
-}
-
-.mt-auto {
-  margin-top: auto;
 }
 
 .flex {
@@ -1016,98 +996,40 @@ video {
   display: grid;
 }
 
-.h-1 {
-  height: 0.25rem;
+.h-\[100\%\] {
+  height: 100%;
 }
 
-.h-10 {
-  height: 2.5rem;
+.h-\[42\%\] {
+  height: 42%;
 }
 
-.h-44 {
-  height: 11rem;
+.h-\[70\%\] {
+  height: 70%;
 }
 
-.h-7 {
-  height: 1.75rem;
+.h-\[90\%\] {
+  height: 90%;
 }
 
-.h-\[5rem\] {
-  height: 5rem;
-}
-
-.min-h-screen {
-  min-height: 100vh;
-}
-
-.w-24 {
-  width: 6rem;
-}
-
-.w-32 {
-  width: 8rem;
-}
-
-.w-6 {
-  width: 1.5rem;
-}
-
-.w-\[12rem\] {
-  width: 12rem;
+.min-h-full {
+  min-height: 100%;
 }
 
 .w-full {
   width: 100%;
 }
 
-.grid-cols-1 {
-  grid-template-columns: repeat(1, minmax(0, 1fr));
+.grid-rows-3 {
+  grid-template-rows: repeat(3, minmax(0, 1fr));
 }
 
-.grid-cols-\[1fr_2fr_1fr\] {
-  grid-template-columns: 1fr 2fr 1fr;
+.items-center {
+  align-items: center;
 }
 
-.grid-rows-2 {
-  grid-template-rows: repeat(2, minmax(0, 1fr));
-}
-
-.grid-rows-\[11rem_2fr_1fr\] {
-  grid-template-rows: 11rem 2fr 1fr;
-}
-
-.justify-end {
-  justify-content: flex-end;
-}
-
-.justify-center {
-  justify-content: center;
-}
-
-.gap-2 {
-  gap: 0.5rem;
-}
-
-.gap-5 {
-  gap: 1.25rem;
-}
-
-.rounded {
-  border-radius: 0.25rem;
-}
-
-.border-0 {
-  border-width: 0px;
-}
-
-.bg-gray-100 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(243 244 246 / var(--tw-bg-opacity, 1));
-}
-
-.bg-slate-200 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(226 232 240 / var(--tw-bg-opacity, 1));
+.justify-between {
+  justify-content: space-between;
 }
 
 .bg-yellow-500 {
@@ -1115,51 +1037,10 @@ video {
   background-color: rgb(234 179 8 / var(--tw-bg-opacity, 1));
 }
 
-.p-4 {
-  padding: 1rem;
-}
-
-.align-top {
-  vertical-align: top;
-}
-
-.align-bottom {
-  vertical-align: bottom;
+.p-1 {
+  padding: 0.25rem;
 }
 
 .font-Funnel {
-  font-family: Funnel, sans-serif;
-}
-
-.text-white {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
-}
-
-@media (min-width: 768px) {
-  .md\:invisible {
-    visibility: hidden;
-  }
-}
-
-@media (min-width: 1024px) {
-  .lg\:h-4 {
-    height: 1rem;
-  }
-
-  .lg\:w-10 {
-    width: 2.5rem;
-  }
-
-  .lg\:text-sm {
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  .dark\:bg-gray-700 {
-    --tw-bg-opacity: 1;
-    background-color: rgb(55 65 81 / var(--tw-bg-opacity, 1));
-  }
+  font-family: Funnel Sans, serif;
 }

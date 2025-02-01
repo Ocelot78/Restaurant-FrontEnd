@@ -3,38 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/dist/styles.css">
     <title>Restauracja</title>
 </head>
-<body>
-    <div class="min-h-screen grid grid-cols-1 grid-rows-[11rem_2fr_1fr] font-Funnel bg-slate-200">
-        <nav class="fixed top-0 w-full h-44 grid grid-cols-[1fr_2fr_1fr] grid-rows-2 p-4 bg-yellow-500 text-white lg:text-sm">
-            <img class="w-[12rem] h-[5rem]" src="images/pasta-e-basta-high-resolution-logo.png" alt="Pasta e basta">
-            <div class="flex gap-5 col-start-3 align-top justify-end">
-                <div class="flex h-7">
-                    <img class="w-6" src="images/call_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg" alt="Telefon:">
-                    <button id="telefonKopiuj" value="+48 123 456 789">+48 123 456 789</button>
-                </div>
-                <div class="flex h-7">
-                    <img class="w-6" src="images/location_on_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg" alt="Adres: ">
-                        <button id="adresKopiuj" value="Ulica 20, 00-000 Miasto">Ulica 20, 00-000 Miasto</button>
-                </div>
+<body class="font-Funnel">
+    <aside class="fixed right-0 top-0">
+
+    </aside>
+    <div class="min-h-full grid grid-rows-3">
+        <nav class="h-[42%] p-1 w-full flex bg-yellow-500 items-center justify-between">
+            <img 
+            class="h-[90%]"
+            src="images/pasta-e-basta-high-resolution-logo.png" 
+            alt="Pasta e basta"
+            >
+            <button
+            class="h-[70%]"
+            >
+                <img 
+                class="h-[100%]"
+                src="images/menu_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg" 
+                alt="menu"
+                >
+        </button>
+        </nav>
+        <main>
+            <div id="photo">
+                <img class="h-[10%] w-[10%]" src="images/nicholas-grande-d9jcPTRD9fo-unsplash.jpg" alt="Makaron">
             </div>
-            <div class="flex gap-2 col-start-2 row-start-2 mt-auto align-bottom justify-center ">
-                <button class="w-24 h-10">Menu<hr class="w-full h-1 mt-3 bg-gray-100 border-0 rounded dark:bg-gray-700"></button>
-                <button class="w-24 h-10">O nas<hr class="w-full h-1 mt-3 bg-gray-100 border-0 rounded dark:bg-gray-700"></button>
-                <button class="w-24 h-10">Rezerwacja<hr class="w-full h-1 mt-3 bg-gray-100 border-0 rounded dark:bg-gray-700"></button>
-                <button class="w-32 h-10">Godziny otwarcia<hr class="w-full h-1 mt-3 bg-gray-100 border-0 rounded dark:bg-gray-700"></button>
-                <button class="w-24 h-10">Kontakt<hr class="w-full h-1 mt-3 bg-gray-100 border-0 rounded dark:bg-gray-700"></button>
-            </div>
-        </nav>  
-        <main class="row-start-2">
-            main
         </main>
-        <footer class="row-start-3">
-            fot
+        <footer>
+            footer
         </footer>
     </div>
-    <script src="/dist/main.js"></script>
 </body>
-</html>
