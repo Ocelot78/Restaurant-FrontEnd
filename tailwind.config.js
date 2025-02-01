@@ -7,6 +7,5 @@ module.exports = {
       Funnel: ["Funnel Sans", 'serif'],
     },},
   },
-  plugins: [require('tailwindcss-motion')], 
 }
 
