@@ -1,19 +1,8 @@
 "use strict";
-function kopiuj(element) {
-    if (element === null) {
-        console.error("Brak elementu do skopiowania");
-    }
-    else {
-        navigator.clipboard.writeText(element.value);
-    }
-}
-document.addEventListener('DOMContentLoaded', () => {
-    const telefon = document.getElementById("telefonKopiuj");
-    const adres = document.getElementById("adresKopiuj");
-    telefon.addEventListener('click', () => {
-        kopiuj(telefon);
-    });
-    adres.addEventListener('click', () => {
-        kopiuj(adres);
-    });
-});
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const aos_1 = __importDefault(require("aos"));
+require("aos/dist/aos.css");
+aos_1.default.init();

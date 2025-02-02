@@ -40,11 +40,13 @@
           />
           <div
             id="photoText"
-            class="absolute top-0 left-0 mt-20  w-full text-center"
+            class="absolute top-0 left-0 mt-20 w-full text-center"
           >
-            <h2 class="text-center text-2xl font-bold text-neutral-200">
+            <h1
+              class="text-center text-2xl font-bold text-neutral-900 animate-fade-up animate-once animate-duration-1000 animate-delay-100 animate-ease-out animate-normal animate-fill-forwards"
+            >
               Witamy w restauracji Pasta e Basta
-            </h2>
+            </h1>
           </div>
           <div
             id="credit"
@@ -57,12 +59,30 @@
             >
           </div>
         </div>
-        <div id="hours" class="flex flex-col items-center justify-center text-center bg-amber-400 text-2xl">
-            <h3 class="text-amber-700">Godziny Otwarcia</h3>
-            <div class="text-lg text-yellow-50">
-                <h4>Poniedziałek - Czwartek 09:00-23:00</h4>
-                <h4>Piątek - Niedziela 12:00-00:00</h4>
-            </div>
+        <div
+          id="hours"
+          class="flex flex-col items-center justify-center bg-yellow-500 text-center text-2xl"
+        >
+          <h3 class="text-gray-800">Godziny Otwarcia</h3>
+          <div class="text-lg text-yellow-50">
+            <h4>Poniedziałek - Czwartek 09:00-23:00</h4>
+            <h4>Piątek - Niedziela 12:00-00:00</h4>
+          </div>
+        </div>
+        <div id="map">
+          <div>
+            <h2 class="text-center text-2xl font-bold text-neutral-900" data-aos="fade-up">
+              Nasza lokalizacja
+            </h2>
+          </div>
+          <iframe
+            class="max-w-full w-full h-[50vh]"
+            data-aos="fade-up"
+            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d728.1578236228087!2d16.93062826968618!3d52.40559481641681!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNTLCsDI0JzIwLjEiTiAxNsKwNTUnNTIuNiJF!5e1!3m2!1spl!2spl!4v1738513997465!5m2!1spl!2spl"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
         </div>
       </main>
       <footer
@@ -83,5 +103,6 @@
         </div>
       </footer>
     </div>
+    <script src="/dist/main.js"></script>
   </body>
 </html>
