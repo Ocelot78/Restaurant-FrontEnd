@@ -5,6 +5,31 @@
   --font-Funnel: Funnel Sans, serif;
 }
 
+.hidden-alt {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-100%);
+  transition: all 2s;
+}
+.show-alt {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+.price {
+  float: right;
+}
+#menu {
+  background: url('/src/images/noita-digital-zcx5ztIjQAM-unsplash.jpg') no-repeat center center fixed;
+}
+.menu-item {  
+  display: flex;
+  justify-content: space-between;
+  padding: 1.3%;
+  border-bottom: 0.15rem solid var(--color-yellow-600);
+}
+
+
 /*
   The default border color has changed to `currentColor` in Tailwind CSS v4,
   so we've added these compatibility styles to make sure everything still

@@ -1,8 +1,13 @@
 "use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-const aos_1 = __importDefault(require("aos"));
-require("aos/dist/aos.css");
-aos_1.default.init();
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show-alt');
+        }
+        else {
+            entry.target.classList.remove('show-alt');
+        }
+    });
+});
+const hiddenElements = document.querySelectorAll('.hidden-alt');
+hiddenElements.forEach((el) => observer.observe(el));

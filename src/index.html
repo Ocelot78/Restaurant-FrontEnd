@@ -61,28 +61,65 @@
         </div>
         <div
           id="hours"
-          class="flex flex-col items-center justify-center bg-yellow-500 text-center text-2xl"
+          class="flex flex-col items-center justify-center bg-yellow-950 text-center text-2xl"
         >
-          <h3 class="text-gray-800">Godziny Otwarcia</h3>
-          <div class="text-lg text-yellow-50">
+          <h3 class="hidden-alt text-amber-600">Godziny Otwarcia</h3>
+          <div class="hidden-alt text-lg text-yellow-50">
             <h4>Poniedziałek - Czwartek 09:00-23:00</h4>
             <h4>Piątek - Niedziela 12:00-00:00</h4>
           </div>
         </div>
-        <div id="map">
-          <div>
-            <h2 class="text-center text-2xl font-bold text-neutral-900" data-aos="fade-up">
+        <div id="map" class="bg-yellow-950">
+            <h2 class="hidden-alt text-center text-2xl font-bold text-amber-50">
               Nasza lokalizacja
             </h2>
-          </div>
           <iframe
-            class="max-w-full w-full h-[50vh]"
-            data-aos="fade-up"
+            class="hidden-alt  max-w-full w-full h-[50vh]"
             src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d728.1578236228087!2d16.93062826968618!3d52.40559481641681!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNTLCsDI0JzIwLjEiTiAxNsKwNTUnNTIuNiJF!5e1!3m2!1spl!2spl!4v1738513997465!5m2!1spl!2spl"
             allowfullscreen=""
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
           ></iframe>
+        </div>
+        <div id="menu" class="text-lg text-yellow-50">
+          <div class="bg-yellow-500 grid">
+            <h1 class="text-3xl justify-self-center p-3">Menu</h1>
+          </div>
+          <div id="menu" class="grid text-center mt-5 w-full relative">
+            <h2 class="text-2xl justify-self-center mt-1">Przystawki</h2>
+            <div class="menu-item"><span>Bruschetta al Pomodoro</span><span class="price">18 zł</span></div>
+            <div class="menu-item"><span>Carpaccio di Manzo</span><span class="price">28 zł</span></div>
+            <div class="menu-item"><span>Caprese</span><span class="price">22 zł</span></div>
+            <h2 class="text-2xl justify-self-center">Dania Główne</h2>
+            <div class="menu-item"><span>Spaghetti Carbonara</span><span class="price">34 zł</span></div>
+            <div class="menu-item"><span>Penne all'Arrabbiata</span><span class="price">29 zł</span></div>
+            <div class="menu-item"><span>Tagliatelle al Tartufo</span><span class="price">42 zł</span></div>
+            <div class="menu-item"><span>Lasagna alla Bolognese</span><span class="price">36 zł</span></div>
+            <div class="menu-item"><span>Ravioli Ricotta e Spinaci</span><span class="price">38 zł</span></div>
+            <h2 class="text-2xl justify-self-center">Desery</h2>
+            <div class="menu-item"><span>Tiramisu</span><span class="price">20 zł</span></div>
+            <div class="menu-item"><span>Panna Cotta</span><span class="price">18 zł</span></div>
+            <div class="menu-item"><span>Canollo Siciliano</span><span class="price">22 zł</span></div>
+            <h2 class="text-2xl justify-self-center">Napoje</h2>
+            <div class="menu-item"><span>Espresso</span><span class="price">10 zł</span></div>
+            <div class="menu-item"><span>Cappuccino</span><span class="price">12 zł</span></div>
+            <div class="menu-item"><span>Cola (250ml)</span><span class="price">8 zł</span></div>
+            <div class="menu-item"><span>Sprite (250ml)</span><span class="price">8 zł</span></div>
+            <div class="menu-item"><span>Fanta (250ml)</span><span class="price">8 zł</span></div>
+            <div class="menu-item"><span>Woda gazowana/niegazowana (250ml)</span><span class="price">6 zł</span></div>
+            <h1 class="text-3xl justify-self-center">Alkohole</h1>
+            <h2 class="text-2xl justify-self-center mt-1">Wina</h2>
+            <div class="menu-item"><span>Wino Chianti (kieliszek)</span><span class="price">18 zł</span></div>
+            <div class="menu-item"><span>Wino Prosecco (kieliszek)</span><span class="price">20 zł</span></div>
+            <div class="menu-item"><span>Wino Merlot (butelka)</span><span class="price">85 zł</span></div>
+            <div class="menu-item"><span>Wino Pinot Grigio (butelka)</span><span class="price">90 zł</span></div>
+            <h2 class="text-2xl justify-self-center ">Alkohole Mocne</h2>
+            <div class="menu-item"><span>Limoncello</span><span class="price">15 zł</span></div>
+            <div class="menu-item"><span>Grappa</span><span class="price">18 zł</span></div>
+            <div class="menu-item"><span>Whisky (50ml)</span><span class="price">25 zł</span></div>
+            <div class="menu-item"><span>Gin Tonic</span><span class="price">22 zł</span></div>
+            <div class="menu-item"><span>Aperol Spritz</span><span class="price">24 zł</span></div>
+          </div>
         </div>
       </main>
       <footer
