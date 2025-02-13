@@ -13,7 +13,7 @@
     <title>Restauracja</title>
   </head>
   <body class="font-Funnel">
-    <div class="grid h-full min-h-full w-full min-w-full">
+    <div class="grid h-full min-h-full w-full min-w-full relative">
       <nav
         class="sticky top-0 z-10 flex h-[9vh] w-full items-center justify-between bg-yellow-500 p-1"
       >
@@ -22,7 +22,7 @@
           src="images/pasta-e-basta-high-resolution-logo.png"
           alt="Pasta e basta"
         />
-        <button class="h-[70%]">
+        <button id="open-sidebar" class="h-[70%]">
           <img
             class="h-[100%]"
             src="images/menu_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg"
@@ -30,7 +30,22 @@
           />
         </button>
       </nav>
-      <aside class="sticky top-0 right-0"></aside>
+      <aside id="sideMenu" class="hidden grid-rows-[9vh_91vh] w-[80vw] fixed right-0 top-0 h-full bg-yellow-500 z-30 ">
+        <button id="close-sidebar" class="h-[70%] mt-3">
+          <img
+            class="h-[100%]"  
+            src="images/menu_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg"
+            alt="menu"
+          />
+        </button>
+        <div class="grid grid-rows-5 gap-0.5 text-2xl mt-10">
+          <button class="h-10">Godziny Otwarcia</button>
+          <button class="h-10">Lokalizacja</button>
+          <button class="h-10">Menu</button>
+          <button class="h-10">Rezerwacja</button>
+          <button class="h-10">Kontakt</button>
+        </div>
+      </aside>
       <main class="grid">
         <div id="photo" class="relative">
           <img
@@ -43,9 +58,11 @@
             class="absolute top-0 left-0 mt-20 w-full text-center"
           >
             <h1
-              class="text-center text-2xl font-bold text-neutral-900 animate-fade-up animate-once animate-duration-1000 animate-delay-100 animate-ease-out animate-normal animate-fill-forwards"
+              class="hidden-alt-2 text-center text-6xl font-bold text-black"
             >
-              Witamy w restauracji Pasta e Basta
+              Witamy,<br>
+              w restauracji<br>
+                <img class="invert-100 text-6xl w-[60vw] m-auto justify-self-center" src="images/pasta-e-basta-high-resolution-logo.png">
             </h1>
           </div>
           <div
@@ -81,44 +98,44 @@
             referrerpolicy="no-referrer-when-downgrade"
           ></iframe>
         </div>
-        <div id="menu" class="text-lg text-yellow-50">
-          <div class="bg-yellow-500 grid">
-            <h1 class="text-3xl justify-self-center p-3">Menu</h1>
+        <div id="menu" class="text-lg text-neutral-800">
+          <div class=" bg-yellow-500 grid">
+            <h1 class="hidden-alt text-3xl justify-self-center p-3">Menu</h1>
           </div>
           <div id="menu" class="grid text-center mt-5 w-full relative">
-            <h2 class="text-2xl justify-self-center mt-1">Przystawki</h2>
-            <div class="menu-item"><span>Bruschetta al Pomodoro</span><span class="price">18 zł</span></div>
-            <div class="menu-item"><span>Carpaccio di Manzo</span><span class="price">28 zł</span></div>
-            <div class="menu-item"><span>Caprese</span><span class="price">22 zł</span></div>
-            <h2 class="text-2xl justify-self-center">Dania Główne</h2>
-            <div class="menu-item"><span>Spaghetti Carbonara</span><span class="price">34 zł</span></div>
-            <div class="menu-item"><span>Penne all'Arrabbiata</span><span class="price">29 zł</span></div>
-            <div class="menu-item"><span>Tagliatelle al Tartufo</span><span class="price">42 zł</span></div>
-            <div class="menu-item"><span>Lasagna alla Bolognese</span><span class="price">36 zł</span></div>
-            <div class="menu-item"><span>Ravioli Ricotta e Spinaci</span><span class="price">38 zł</span></div>
-            <h2 class="text-2xl justify-self-center">Desery</h2>
-            <div class="menu-item"><span>Tiramisu</span><span class="price">20 zł</span></div>
-            <div class="menu-item"><span>Panna Cotta</span><span class="price">18 zł</span></div>
-            <div class="menu-item"><span>Canollo Siciliano</span><span class="price">22 zł</span></div>
-            <h2 class="text-2xl justify-self-center">Napoje</h2>
-            <div class="menu-item"><span>Espresso</span><span class="price">10 zł</span></div>
-            <div class="menu-item"><span>Cappuccino</span><span class="price">12 zł</span></div>
-            <div class="menu-item"><span>Cola (250ml)</span><span class="price">8 zł</span></div>
-            <div class="menu-item"><span>Sprite (250ml)</span><span class="price">8 zł</span></div>
-            <div class="menu-item"><span>Fanta (250ml)</span><span class="price">8 zł</span></div>
-            <div class="menu-item"><span>Woda gazowana/niegazowana (250ml)</span><span class="price">6 zł</span></div>
-            <h1 class="text-3xl justify-self-center">Alkohole</h1>
-            <h2 class="text-2xl justify-self-center mt-1">Wina</h2>
-            <div class="menu-item"><span>Wino Chianti (kieliszek)</span><span class="price">18 zł</span></div>
-            <div class="menu-item"><span>Wino Prosecco (kieliszek)</span><span class="price">20 zł</span></div>
-            <div class="menu-item"><span>Wino Merlot (butelka)</span><span class="price">85 zł</span></div>
-            <div class="menu-item"><span>Wino Pinot Grigio (butelka)</span><span class="price">90 zł</span></div>
-            <h2 class="text-2xl justify-self-center ">Alkohole Mocne</h2>
-            <div class="menu-item"><span>Limoncello</span><span class="price">15 zł</span></div>
-            <div class="menu-item"><span>Grappa</span><span class="price">18 zł</span></div>
-            <div class="menu-item"><span>Whisky (50ml)</span><span class="price">25 zł</span></div>
-            <div class="menu-item"><span>Gin Tonic</span><span class="price">22 zł</span></div>
-            <div class="menu-item"><span>Aperol Spritz</span><span class="price">24 zł</span></div>
+            <h2 class="hidden-alt text-2xl justify-self-center mt-2">Przystawki</h2>
+            <div class="menu-item hidden-alt"><span>Bruschetta al Pomodoro</span><span class="price">18 zł</span></div>
+            <div class="menu-item hidden-alt"><span>Carpaccio di Manzo</span><span class="price">28 zł</span></div>
+            <div class="menu-item hidden-alt"><span>Caprese</span><span class="price">22 zł</span></div>
+            <h2 class="hidden-alt text-2xl justify-self-center">Dania Główne</h2>
+            <div class="menu-item hidden-alt"><span>Spaghetti Carbonara</span><span class="price">34 zł</span></div>
+            <div class="menu-item hidden-alt"><span>Penne all'Arrabbiata</span><span class="price">29 zł</span></div>
+            <div class="menu-item hidden-alt"><span>Tagliatelle al Tartufo</span><span class="price">42 zł</span></div>
+            <div class="menu-item hidden-alt"><span>Lasagna alla Bolognese</span><span class="price">36 zł</span></div>
+            <div class="menu-item hidden-alt"><span>Ravioli Ricotta e Spinaci</span><span class="price">38 zł</span></div>
+            <h2 class="hidden-alt text-2xl justify-self-center mt-2">Desery</h2>
+            <div class="menu-item hidden-alt"><span>Tiramisu</span><span class="price">20 zł</span></div>
+            <div class="menu-item hidden-alt"><span>Panna Cotta</span><span class="price">18 zł</span></div>
+            <div class="menu-item hidden-alt"><span>Canollo Siciliano</span><span class="price">22 zł</span></div>
+            <h2 class="hidden-alt text-2xl justify-self-center mt-2">Napoje</h2>
+            <div class="menu-item hidden-alt"><span>Espresso</span><span class="price">10 zł</span></div>
+            <div class="menu-item hidden-alt"><span>Cappuccino</span><span class="price">12 zł</span></div>
+            <div class="menu-item hidden-alt"><span>Cola (250ml)</span><span class="price">8 zł</span></div>
+            <div class="menu-item hidden-alt"><span>Sprite (250ml)</span><span class="price">8 zł</span></div>
+            <div class="menu-item hidden-alt"><span>Fanta (250ml)</span><span class="price">8 zł</span></div>
+            <div class="menu-item hidden-alt"><span>Woda gazowana/niegazowana (250ml)</span><span class="price">6 zł</span></div>
+            <h1 class="hidden-alt text-3xl justify-self-center mt-2">Alkohole</h1>
+            <h2 class="hidden-alt text-2xl justify-self-center mt-2">Wina</h2>
+            <div class="menu-item hidden-alt"><span>Wino Chianti (kieliszek)</span><span class="price">18 zł</span></div>
+            <div class="menu-item hidden-alt"><span>Wino Prosecco (kieliszek)</span><span class="price">20 zł</span></div>
+            <div class="menu-item hidden-alt"><span>Wino Merlot (butelka)</span><span class="price">85 zł</span></div>
+            <div class="menu-item hidden-alt"><span>Wino Pinot Grigio (butelka)</span><span class="price">90 zł</span></div>
+            <h2 class="hidden-alt text-2xl justify-self-center mt-2">Alkohole Mocne</h2>
+            <div class="menu-item hidden-alt"><span>Limoncello</span><span class="price">15 zł</span></div>
+            <div class="menu-item hidden-alt"><span>Grappa</span><span class="price">18 zł</span></div>
+            <div class="menu-item hidden-alt"><span>Whisky (50ml)</span><span class="price">25 zł</span></div>
+            <div class="menu-item hidden-alt"><span>Gin Tonic</span><span class="price">22 zł</span></div>
+            <div class="menu-item hidden-alt"><span>Aperol Spritz</span><span class="price">24 zł</span></div>
           </div>
         </div>
       </main>
