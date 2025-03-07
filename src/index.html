@@ -138,13 +138,14 @@
             <div class="menu-item hidden-alt"><span>Aperol Spritz</span><span class="price">24 zł</span></div>
           </div>
         </div>
-        <div id="reservation" class="flex flex-col p-10 justify-center items-center bg-yellow-50">
-          <input type="number" placeholder="Ilość osób" class="w-52 m-4 p-3">
-          <input type="datetime-local" class="w-52 m-4 p-3">
+        <div id="reservation" class="grid grid-cols-[2fr,1fr] text-center place-items-center bg-yellow-50">
+          <input type="number" placeholder="Ilość osób" class="w-52 m-4 p-3 border-[0.2rem] rounded-lg"><h2>Ilość osób</h2>
+          <input type="datetime-local" class="w-52 m-4 p-3 border-[0.2rem] rounded-lg" ><h2>Data i godzina</h2>
+          <input type="text" placeholder="+48 123 456 789" class="w-52 m-4 p-3 border-[0.2rem] rounded-lg"><h2>Twój numer telefonu</h2>
           <div class="flex justify-center items-center space-x-5 m-4">
             <input type="checkbox"><h2>Akceptuje warunki kożystania z serwisu.</h2>
           </div>
-          <button class="bg-yellow-400 border-[0.5rem] border-yellow-400 rounded-lg w-[50%] h-14 hover:bg-yellow-500 m-4">Rezerwuję</button>
+          <button class="bg-yellow-400 rounded-lg w-[50%] h-14 hover:bg-yellow-500 m-4">Rezerwuję</button>
         </div>  
       </main>
       <footer
