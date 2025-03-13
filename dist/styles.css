@@ -561,6 +561,9 @@
   .right-4 {
     right: calc(var(--spacing) * 4);
   }
+  .right-\[-100vw\] {
+    right: -100vw;
+  }
   .bottom-2 {
     bottom: calc(var(--spacing) * 2);
   }
@@ -572,6 +575,12 @@
   }
   .z-30 {
     z-index: 30;
+  }
+  .col-span-2 {
+    grid-column: span 2 / span 2;
+  }
+  .col-end-1 {
+    grid-column-end: 1;
   }
   .m-4 {
     margin: calc(var(--spacing) * 4);
@@ -599,9 +608,6 @@
   }
   .mt-20 {
     margin-top: calc(var(--spacing) * 20);
-  }
-  .mr-2 {
-    margin-right: calc(var(--spacing) * 2);
   }
   .block {
     display: block;
@@ -651,9 +657,6 @@
   .min-h-full {
     min-height: 100%;
   }
-  .w-1 {
-    width: calc(var(--spacing) * 1);
-  }
   .w-52 {
     width: calc(var(--spacing) * 52);
   }
@@ -663,8 +666,11 @@
   .w-\[60vw\] {
     width: 60vw;
   }
-  .w-\[80vw\] {
-    width: 80vw;
+  .w-\[75vw\] {
+    width: 75vw;
+  }
+  .w-\[100vw\] {
+    width: 100vw;
   }
   .w-full {
     width: 100%;
@@ -680,6 +686,9 @@
   }
   .transform {
     transform: var(--tw-rotate-x) var(--tw-rotate-y) var(--tw-rotate-z) var(--tw-skew-x) var(--tw-skew-y);
+  }
+  .animate-fade-left {
+    animation: var(--animate-fade-left);
   }
   .resize {
     resize: both;
@@ -785,10 +794,6 @@
     font-size: var(--text-lg);
     line-height: var(--tw-leading, var(--text-lg--line-height));
   }
-  .text-xl {
-    font-size: var(--text-xl);
-    line-height: var(--tw-leading, var(--text-xl--line-height));
-  }
   .text-xs {
     font-size: var(--text-xs);
     line-height: var(--tw-leading, var(--text-xs--line-height));
@@ -860,6 +865,46 @@
     --tw-duration: 700ms;
     transition-duration: 700ms;
   }
+  .duration-900 {
+    --tw-duration: 900ms;
+    transition-duration: 900ms;
+  }
+  .animate-delay-150 {
+    animation-delay: 150ms;
+  }
+  .animate-delay-900 {
+    animation-delay: 900ms;
+  }
+  .animate-delay-\[300ms\] {
+    animation-delay: 300ms;
+  }
+  .animate-delay-\[350ms\] {
+    animation-delay: 350ms;
+  }
+  .animate-delay-\[800ms\] {
+    animation-delay: 800ms;
+  }
+  .animate-delay-\[900ms\] {
+    animation-delay: 900ms;
+  }
+  .animate-delay-\[ms\] {
+    animation-delay: ms;
+  }
+  .animate-duration-1000 {
+    animation-duration: 1000ms;
+  }
+  .animate-ease-out {
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+  .animate-fill-forwards {
+    animation-fill-mode: forwards;
+  }
+  .animate-normal {
+    animation-direction: normal;
+  }
+  .animate-once {
+    animation-iteration-count: 1;
+  }
   .hover\:bg-yellow-500 {
     &:hover {
       @media (hover: hover) {
@@ -872,6 +917,36 @@
       @media (hover: hover) {
         color: var(--color-gray-200);
       }
+    }
+  }
+  .md\:col-span-2 {
+    @media (width >= 48rem) {
+      grid-column: span 2 / span 2;
+    }
+  }
+  .md\:col-start-0 {
+    @media (width >= 48rem) {
+      grid-column-start: 0;
+    }
+  }
+  .md\:col-start-1 {
+    @media (width >= 48rem) {
+      grid-column-start: 1;
+    }
+  }
+  .md\:col-start-2 {
+    @media (width >= 48rem) {
+      grid-column-start: 2;
+    }
+  }
+  .md\:grid {
+    @media (width >= 48rem) {
+      display: grid;
+    }
+  }
+  .md\:grid-cols-2 {
+    @media (width >= 48rem) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
     }
   }
 }

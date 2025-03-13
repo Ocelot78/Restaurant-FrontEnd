@@ -5,165 +5,86 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="icon" type="image/x-icon" href="images/icon.ico">
-    <link
-      href="https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="icon" type="image/x-icon" href="images/icon.ico" />
+    <link href="https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="/dist/styles.css" />
     <title>Restauracja</title>
   </head>
-  <body class="font-Funnel">
-    <div class="grid h-full min-h-full w-full min-w-full relative">
-      <nav
-        class="sticky top-0 z-10 flex h-[9vh] w-full items-center justify-between bg-yellow-500 p-1"
-      >
-        <img
-          class="h-[90%]"
-          src="images/pasta-e-basta-high-resolution-logo.png"
-          alt="Pasta e basta"
-        />
+  <body class="font-Funnel bg-yellow-500">
+    <div class="grid h-full min-h-full w-full min-w-full relative md:grid-cols-2">
+      <nav id="navbar" class="sticky top-0 z-10 flex h-[9vh] w-full items-center justify-between bg-yellow-500 p-1 md:col-span-2">
+        <img class="h-[90%]" src="images/pasta-e-basta-high-resolution-logo.png" alt="Pasta e basta" />
         <button id="open-sidebar" class="h-[70%]">
-          <img
-            class="h-[100%]"
-            src="images/menu_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg"
-            alt="menu"
-          />
+          <img class="h-[100%]" src="images/menu_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg" alt="menu" />
         </button>
       </nav>
-      <aside id="sideMenu" class="hidden grid-rows-[9vh_91vh] w-1 fixed right-0 top-0 h-full bg-yellow-500 z-30 transition-all duration-700 ">
+      <aside id="sideMenu" class="grid grid-rows-[9vh_91vh] w-[75vw] fixed right-[-100vw] top-0 h-full bg-yellow-500 z-30 transition-all duration-900">
         <button id="close-sidebar" class="h-[70%] mt-3">
-          <img
-            class="h-[100%]"  
-            src="images/menu_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg"
-            alt="menu"
-          />
+          <img class="h-[100%]" src="images/menu_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg" alt="menu" />
         </button>
         <div class="grid grid-rows-5 gap-0.5 text-2xl mt-10">
-          <button class="menuButton h-10 hidden">Godziny Otwarcia</button>
-          <button class="menuButton h-10 hidden">Lokalizacja</button>
-          <button class="menuButton h-10 hidden">Menu</button>
-          <button class="menuButton h-10 hidden">Rezerwacja</button>
-          <button class="menuButton h-10 hidden">Kontakt</button>
+          <button id="openHoursScroll" class="menuButton h-10">Godziny Otwarcia</button>
+          <button id="location" class="menuButton h-10">Lokalizacja</button>
+          <button id="menuScroll" class="menuButton h-10">Menu</button>
+          <button id="reservationScroll" class="menuButton h-10">Rezerwacja</button>
+          <button id="contact" class="menuButton h-10">Kontakt</button>
         </div>
       </aside>
-      <main class="grid">
-        <div id="photo" class="relative">
-          <img
-            class=""
-            src="images/aleksandra-tanasiienko-0y6eMd8vevA-unsplash.jpg"
-            alt="Makaron"
-          />
-          <div
-            id="photoText"
-            class="absolute top-0 left-0 mt-20 w-full text-center"
-          >
-            <h1
-              class="hidden-alt-2 text-center text-6xl font-bold text-black"
-            >
-              Witamy,<br>
-              w restauracji<br>
-                <img class="invert-100 text-6xl w-[60vw] m-auto justify-self-center" src="images/pasta-e-basta-high-resolution-logo.png">
+      <main class="grid md:col-span-2">
+        <div id="photo" class="relative col-end-1">
+          <img src="images/aleksandra-tanasiienko-0y6eMd8vevA-unsplash.jpg" alt="Makaron" />
+          <div id="photoText" class="absolute top-0 left-0 mt-20 w-full text-center">
+            <h1 class="hidden-alt-2 text-center text-6xl font-bold text-black md:col-start-2">
+              Witamy,<br />
+              w restauracji<br />
+              <img class="invert-100 text-6xl w-[60vw] m-auto justify-self-center" src="images/pasta-e-basta-high-resolution-logo.png" alt="Logo" />
             </h1>
           </div>
-          <div
-            id="credit"
-            class="absolute right-4 bottom-2 text-xs text-gray-100"
-          >
+          <div id="credit" class="absolute right-4 bottom-2 text-xs text-gray-100">
             Photo by
-            <a
-              href="https://unsplash.com/@tasikola_pl?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
-              >Aleksandra Tanasiienko</a
-            >
+            <a href="https://unsplash.com/@tasikola_pl?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Aleksandra Tanasiienko</a>
           </div>
         </div>
-        <div
-          id="hours"
-          class="flex flex-col items-center justify-center bg-yellow-950 text-center text-2xl"
-        >
+        <div id="hours" class="flex flex-col items-center justify-center bg-yellow-950 text-center text-2xl">
           <h3 class="hidden-alt text-amber-600">Godziny Otwarcia</h3>
           <div class="hidden-alt text-lg text-yellow-50">
             <h4>Poniedziałek - Czwartek 09:00-23:00</h4>
             <h4>Piątek - Niedziela 12:00-00:00</h4>
           </div>
         </div>
-        <div id="map" class="bg-yellow-950">
-            <h2 class="hidden-alt text-center text-2xl font-bold text-amber-50">
-              Nasza lokalizacja
-            </h2>
-          <iframe
-            class="hidden-alt  max-w-full w-full h-[50vh]"
-            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d728.1578236228087!2d16.93062826968618!3d52.40559481641681!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNTLCsDI0JzIwLjEiTiAxNsKwNTUnNTIuNiJF!5e1!3m2!1spl!2spl!4v1738513997465!5m2!1spl!2spl"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-          ></iframe>
+        <div id="location" class="bg-yellow-950">
+          <h2 class="hidden-alt text-center text-2xl font-bold text-amber-50">Nasza lokalizacja</h2>
+          <iframe class="hidden-alt max-w-full w-full h-[50vh]" src="https://www.google.com/maps/embed?..." allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
-        <div id="menu" class="text-lg text-neutral-800">
-          <div class=" bg-yellow-500 grid">
+        <div id="menuSection" class="text-lg text-neutral-800">
+          <div class="bg-yellow-500 grid">
             <h1 class="hidden-alt text-3xl justify-self-center p-3">Menu</h1>
           </div>
-          <div id="menu" class="grid text-center mt-5 w-full relative">
+          <div class="grid text-center mt-5 w-full relative">
             <h2 class="hidden-alt text-2xl justify-self-center mt-2">Przystawki</h2>
             <div class="menu-item hidden-alt"><span>Bruschetta al Pomodoro</span><span class="price">18 zł</span></div>
-            <div class="menu-item hidden-alt"><span>Carpaccio di Manzo</span><span class="price">28 zł</span></div>
-            <div class="menu-item hidden-alt"><span>Caprese</span><span class="price">22 zł</span></div>
-            <h2 class="hidden-alt text-2xl justify-self-center">Dania Główne</h2>
-            <div class="menu-item hidden-alt"><span>Spaghetti Carbonara</span><span class="price">34 zł</span></div>
-            <div class="menu-item hidden-alt"><span>Penne all'Arrabbiata</span><span class="price">29 zł</span></div>
-            <div class="menu-item hidden-alt"><span>Tagliatelle al Tartufo</span><span class="price">42 zł</span></div>
-            <div class="menu-item hidden-alt"><span>Lasagna alla Bolognese</span><span class="price">36 zł</span></div>
-            <div class="menu-item hidden-alt"><span>Ravioli Ricotta e Spinaci</span><span class="price">38 zł</span></div>
-            <h2 class="hidden-alt text-2xl justify-self-center mt-2">Desery</h2>
-            <div class="menu-item hidden-alt"><span>Tiramisu</span><span class="price">20 zł</span></div>
-            <div class="menu-item hidden-alt"><span>Panna Cotta</span><span class="price">18 zł</span></div>
-            <div class="menu-item hidden-alt"><span>Canollo Siciliano</span><span class="price">22 zł</span></div>
-            <h2 class="hidden-alt text-2xl justify-self-center mt-2">Napoje</h2>
-            <div class="menu-item hidden-alt"><span>Espresso</span><span class="price">10 zł</span></div>
-            <div class="menu-item hidden-alt"><span>Cappuccino</span><span class="price">12 zł</span></div>
-            <div class="menu-item hidden-alt"><span>Cola (250ml)</span><span class="price">8 zł</span></div>
-            <div class="menu-item hidden-alt"><span>Sprite (250ml)</span><span class="price">8 zł</span></div>
-            <div class="menu-item hidden-alt"><span>Fanta (250ml)</span><span class="price">8 zł</span></div>
-            <div class="menu-item hidden-alt"><span>Woda gazowana/niegazowana (250ml)</span><span class="price">6 zł</span></div>
-            <h1 class="hidden-alt text-3xl justify-self-center mt-2">Alkohole</h1>
-            <h2 class="hidden-alt text-2xl justify-self-center mt-2">Wina</h2>
-            <div class="menu-item hidden-alt"><span>Wino Chianti (kieliszek)</span><span class="price">18 zł</span></div>
-            <div class="menu-item hidden-alt"><span>Wino Prosecco (kieliszek)</span><span class="price">20 zł</span></div>
-            <div class="menu-item hidden-alt"><span>Wino Merlot (butelka)</span><span class="price">85 zł</span></div>
-            <div class="menu-item hidden-alt"><span>Wino Pinot Grigio (butelka)</span><span class="price">90 zł</span></div>
-            <h2 class="hidden-alt text-2xl justify-self-center mt-2">Alkohole Mocne</h2>
-            <div class="menu-item hidden-alt"><span>Limoncello</span><span class="price">15 zł</span></div>
-            <div class="menu-item hidden-alt"><span>Grappa</span><span class="price">18 zł</span></div>
-            <div class="menu-item hidden-alt"><span>Whisky (50ml)</span><span class="price">25 zł</span></div>
-            <div class="menu-item hidden-alt"><span>Gin Tonic</span><span class="price">22 zł</span></div>
-            <div class="menu-item hidden-alt"><span>Aperol Spritz</span><span class="price">24 zł</span></div>
           </div>
         </div>
         <div id="reservation" class="grid grid-cols-[2fr,1fr] text-center place-items-center bg-yellow-50">
-            <h2 class="text-3xl mt-1.5">Rezerwacja</h2>
-          <input type="number" placeholder="Ilość osób" class="w-52 m-4 p-3 border-[0.2rem] rounded-lg"><h2>Ilość osób</h2>
-          <input type="datetime-local" class="w-52 m-4 p-3 border-[0.2rem] rounded-lg" ><h2>Data i godzina</h2>
-          <input type="text" placeholder="+48 123 456 789" class="w-52 m-4 p-3 border-[0.2rem] rounded-lg"><h2>Twój numer telefonu</h2>
+          <h2 class="text-3xl mt-1.5">Rezerwacja</h2>
+          <input type="number" placeholder="Ilość osób" class="w-52 m-4 p-3 border-[0.2rem] rounded-lg" />
+          <h2>Ilość osób</h2>
+          <input type="datetime-local" class="w-52 m-4 p-3 border-[0.2rem] rounded-lg" />
+          <h2>Data i godzina</h2>
+          <input type="text" placeholder="+48 123 456 789" class="w-52 m-4 p-3 border-[0.2rem] rounded-lg" />
+          <h2>Twój numer telefonu</h2>
           <div class="flex justify-center items-center space-x-5 m-4">
-            <input type="checkbox"><h2>Akceptuje warunki kożystania z serwisu.</h2>
+            <input type="checkbox" id="terms" /><label for="terms">Akceptuję warunki korzystania z serwisu.</label>
           </div>
           <button class="bg-yellow-400 rounded-lg w-[50%] h-14 hover:bg-yellow-500 m-4">Rezerwuję</button>
-        </div>  
+        </div>
       </main>
-      <footer
-        class="flex items-center justify-center bg-neutral-500 text-center"
-      >
-        <div>
+      <footer class="flex items-center justify-center bg-neutral-500 text-center">
+        <div id="contactInfo">
           <p>&#169; 2025 Pasta e Basta</p>
           <ul class="mt-2 flex justify-center space-x-6">
-            <li>
-              <a href="" class="transition-colors hover:text-gray-200">O nas</a>
-            </li>
-            <li>
-              <a href="" class="transition-colors hover:text-gray-200"
-                >Polityka prywatności</a
-              >
-            </li>
+            <li><a href="#" class="transition-colors hover:text-gray-200">O nas</a></li>
+            <li><a href="#" class="transition-colors hover:text-gray-200">Polityka prywatności</a></li>
           </ul>
         </div>
       </footer>

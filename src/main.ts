@@ -17,7 +17,13 @@ function hiddenHandler(item :Element) {
     if (!element) {
         console.error("Element not found")
     }else{
-        element.classList.toggle('hidden')
+        element.classList.toggle("animate-fade-left")
+        element.classList.toggle("animate-once")
+        element.classList.toggle("animate-duration-1000")
+        element.classList.toggle("animate-delay-[350ms]")
+        element.classList.toggle("animate-ease-out")
+        element.classList.toggle("animate-normal")
+        element.classList.toggle("animate-fill-forwards")
     }
 }
 async function handleSidebar(menu :HTMLElement, menuButtons :NodeListOf<Element>) {
@@ -25,15 +31,22 @@ async function handleSidebar(menu :HTMLElement, menuButtons :NodeListOf<Element>
         console.error('sidebar not found')
         return
     }else{
-        menu.classList.remove('hidden')
+        menu.classList.toggle('right-[-100vw]') 
+        menu.classList.toggle('right-0')
         menuButtons.forEach(hiddenHandler)
-        menu.classList.toggle('grid')
-        menu.classList.toggle('w-[80vw]')
-        menu.classList.toggle('mr-2')
-        if (menu.classList.contains('hidden')) {
-            await sleep(800);
-            menu.classList.toggle('hidden')
-        }
+    }
+}
+function scrollHandler(scrollElement :HTMLElement) {
+    const navbarHeight = document.getElementById("navbar")?.offsetHeight as number;
+    if (!scrollElement){
+        console.error('element not found')
+        return
+    }else{
+        const targetPosition = scrollElement.offsetTop - navbarHeight;
+        window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth'
+        })
     }
 }
 document.addEventListener("DOMContentLoaded", () =>  {
@@ -41,11 +54,40 @@ document.addEventListener("DOMContentLoaded", () =>  {
     const sideMenu = document.getElementById("sideMenu") as HTMLElement;
     const openSidebar = document.getElementById("open-sidebar") as HTMLElement;
     const closeSidebar = document.getElementById("close-sidebar") as HTMLElement;
+    const openingHours = document.getElementById("openHoursScroll") as HTMLElement;
+    const location = document.getElementById("location") as HTMLElement;
+    const menuScroll = document.getElementById("menuScroll") as HTMLElement;
+    const reservationScroll = document.getElementById("reservationScroll") as HTMLElement; 
+    const contact = document.getElementById("contact") as HTMLElement;
+    const hours = document.getElementById("hours") as HTMLElement;
+    const map = document.getElementById("map") as HTMLElement;
+    const menuToScroll = document.getElementById("menu") as HTMLElement;
+    const reservation = document.getElementById("reservation") as HTMLElement;
+    const contactInfo = document.getElementById("contactInfo") as HTMLElement;
     openSidebar.addEventListener('click', () => {
         handleSidebar(sideMenu, sideMenuElements)
     })
     closeSidebar.addEventListener('click', () => {
         handleSidebar(sideMenu, sideMenuElements)
     })
-
+    openingHours.addEventListener('click', () => {
+        handleSidebar(sideMenu, sideMenuElements)
+        scrollHandler(hours)
+    })
+    location.addEventListener('click', () => {
+        handleSidebar(sideMenu, sideMenuElements)
+        scrollHandler(map)
+    })
+    menuScroll.addEventListener('click', () => {
+        handleSidebar(sideMenu, sideMenuElements)
+        scrollHandler(menuToScroll)
+    })
+    reservationScroll.addEventListener('click',() => {
+        handleSidebar(sideMenu, sideMenuElements)
+        scrollHandler(reservation)
+    })  
+    contact.addEventListener('click', () => {
+        handleSidebar(sideMenu, sideMenuElements)
+        scrollHandler(contactInfo)
+    })
 })

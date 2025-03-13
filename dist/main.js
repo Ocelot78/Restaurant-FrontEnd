@@ -29,7 +29,13 @@ function hiddenHandler(item) {
         console.error("Element not found");
     }
     else {
-        element.classList.toggle('hidden');
+        element.classList.toggle("animate-fade-left");
+        element.classList.toggle("animate-once");
+        element.classList.toggle("animate-duration-1000");
+        element.classList.toggle("animate-delay-[350ms]");
+        element.classList.toggle("animate-ease-out");
+        element.classList.toggle("animate-normal");
+        element.classList.toggle("animate-fill-forwards");
     }
 }
 function handleSidebar(menu, menuButtons) {
@@ -39,27 +45,66 @@ function handleSidebar(menu, menuButtons) {
             return;
         }
         else {
-            menu.classList.remove('hidden');
+            menu.classList.toggle('right-[-100vw]');
+            menu.classList.toggle('right-0');
             menuButtons.forEach(hiddenHandler);
-            menu.classList.toggle('grid');
-            menu.classList.toggle('w-[80vw]');
-            menu.classList.toggle('mr-2');
-            if (menu.classList.contains('hidden')) {
-                yield sleep(800);
-                menu.classList.toggle('hidden');
-            }
         }
     });
+}
+function scrollHandler(scrollElement) {
+    var _a;
+    const navbarHeight = (_a = document.getElementById("navbar")) === null || _a === void 0 ? void 0 : _a.offsetHeight;
+    if (!scrollElement) {
+        console.error('element not found');
+        return;
+    }
+    else {
+        const targetPosition = scrollElement.offsetTop - navbarHeight;
+        window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth'
+        });
+    }
 }
 document.addEventListener("DOMContentLoaded", () => {
     const sideMenuElements = document.querySelectorAll('.menuButton');
     const sideMenu = document.getElementById("sideMenu");
     const openSidebar = document.getElementById("open-sidebar");
     const closeSidebar = document.getElementById("close-sidebar");
+    const openingHours = document.getElementById("openHoursScroll");
+    const location = document.getElementById("location");
+    const menuScroll = document.getElementById("menuScroll");
+    const reservationScroll = document.getElementById("reservationScroll");
+    const contact = document.getElementById("contact");
+    const hours = document.getElementById("hours");
+    const map = document.getElementById("map");
+    const menuToScroll = document.getElementById("menu");
+    const reservation = document.getElementById("reservation");
+    const contactInfo = document.getElementById("contactInfo");
     openSidebar.addEventListener('click', () => {
         handleSidebar(sideMenu, sideMenuElements);
     });
     closeSidebar.addEventListener('click', () => {
         handleSidebar(sideMenu, sideMenuElements);
+    });
+    openingHours.addEventListener('click', () => {
+        handleSidebar(sideMenu, sideMenuElements);
+        scrollHandler(hours);
+    });
+    location.addEventListener('click', () => {
+        handleSidebar(sideMenu, sideMenuElements);
+        scrollHandler(map);
+    });
+    menuScroll.addEventListener('click', () => {
+        handleSidebar(sideMenu, sideMenuElements);
+        scrollHandler(menuToScroll);
+    });
+    reservationScroll.addEventListener('click', () => {
+        handleSidebar(sideMenu, sideMenuElements);
+        scrollHandler(reservation);
+    });
+    contact.addEventListener('click', () => {
+        handleSidebar(sideMenu, sideMenuElements);
+        scrollHandler(contactInfo);
     });
 });
