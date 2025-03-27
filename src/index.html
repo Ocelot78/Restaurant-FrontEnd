@@ -11,12 +11,19 @@
     <title>Restauracja</title>
   </head>
   <body class="font-Funnel bg-yellow-500">
-    <div class="grid h-full min-h-full w-full min-w-full relative md:grid-cols-2">
-      <nav id="navbar" class="sticky top-0 z-10 flex h-[9vh] w-full items-center justify-between bg-yellow-500 p-1 md:col-span-2">
+    <div class="grid h-full min-h-full w-full min-w-full relative lg:grid-cols-2">
+      <nav id="navbar" class="sticky top-0 z-10 flex h-[9vh] w-full items-center justify-between bg-yellow-500 p-1 lg:col-span-2">
         <img class="h-[90%]" src="images/pasta-e-basta-high-resolution-logo.png" alt="Pasta e basta" />
-        <button id="open-sidebar" class="h-[70%]">
+        <button id="open-sidebar" class="h-[70%] lg:hidden">
           <img class="h-[100%]" src="images/menu_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg" alt="menu" />
-        </button>
+        </button> 
+        <div class="hidden lg:grid grid-cols-5 text-white p-2">
+          <button id="openingHoursBtn" class="menuButton p-1 bg-neutral-700 h-10 mx-4 border-b-4 rounded-md border-b-neutral-800 hover:shadow-lg hover:shadow-neutral-800">Godziny Otwarcia</button>
+          <button id="locationBtn" class="menuButton p-1 bg-neutral-700 h-10 mx-4 border-b-4 rounded-md border-b-neutral-800 hover:shadow-lg hover:shadow-neutral-800">Lokalizacja</button>
+          <button id="menuBtn" class="menuButton p-1 bg-neutral-700 h-10 mx-4 border-b-4 rounded-md border-b-neutral-800 hover:shadow-lg hover:shadow-neutral-800">Menu</button>
+          <button id="reservationBtn" class="menuButton p-1 bg-neutral-700 h-10 mx-4 border-b-4 rounded-md border-b-neutral-800 hover:shadow-lg hover:shadow-neutral-800">Rezerwacja</button>
+          <button id="contactBtn" class="menuButton p-1 bg-neutral-700 h-10 mx-4 border-b-4 rounded-md border-b-neutral-800 hover:shadow-lg hover:shadow-neutral-800">Kontakt</button>
+        </div>
       </nav>
       <aside id="sideMenu" class="grid grid-rows-[9vh_91vh] w-[75vw] fixed right-[-100vw] top-0 h-full bg-yellow-500 z-30 transition-all duration-900">
         <button id="close-sidebar" class="h-[70%] mt-3">
@@ -30,11 +37,11 @@
           <button id="contact" class="menuButton h-10">Kontakt</button>
         </div>
       </aside>
-      <main class="grid md:col-span-2">
+      <main class="grid lg:col-span-2">
         <div id="photo" class="relative col-end-1">
           <img src="images/aleksandra-tanasiienko-0y6eMd8vevA-unsplash.jpg" alt="Makaron" />
           <div id="photoText" class="absolute top-0 left-0 mt-20 w-full text-center">
-            <h1 class="hidden-alt-2 text-center text-6xl font-bold text-black md:col-start-2">
+            <h1 class="hidden-alt-2 text-center text-6xl font-bold text-black lg:col-start-2">
               Witamy,<br />
               w restauracji<br />
               <img class="invert-100 text-6xl w-[60vw] m-auto justify-self-center" src="images/pasta-e-basta-high-resolution-logo.png" alt="Logo" />
@@ -63,6 +70,23 @@
           <div class="grid text-center mt-5 w-full relative">
             <h2 class="hidden-alt text-2xl justify-self-center mt-2">Przystawki</h2>
             <div class="menu-item hidden-alt"><span>Bruschetta al Pomodoro</span><span class="price">18 zł</span></div>
+            <div class="menu-item hidden-alt"><span>Carpaccio di Manzo</span><span class="price">32 zł</span></div>
+            <div class="menu-item hidden-alt"><span>Antipasto Misto</span><span class="price">40 zł</span></div>
+            
+            <h2 class="hidden-alt text-2xl justify-self-center mt-5">Dania Główne</h2>
+            <div class="menu-item hidden-alt"><span>Spaghetti Carbonara</span><span class="price">38 zł</span></div>
+            <div class="menu-item hidden-alt"><span>Tagliatelle al Tartufo</span><span class="price">45 zł</span></div>
+            <div class="menu-item hidden-alt"><span>Risotto ai Funghi</span><span class="price">42 zł</span></div>
+            
+            <h2 class="hidden-alt text-2xl justify-self-center mt-5">Desery</h2>
+            <div class="menu-item hidden-alt"><span>Tiramisu</span><span class="price">22 zł</span></div>
+            <div class="menu-item hidden-alt"><span>Panna Cotta</span><span class="price">20 zł</span></div>
+            <div class="menu-item hidden-alt"><span>Gelato</span><span class="price">18 zł</span></div>
+            
+            <h2 class="hidden-alt text-2xl justify-self-center mt-5">Napoje</h2>
+            <div class="menu-item hidden-alt"><span>Woda Mineralna</span><span class="price">8 zł</span></div>
+            <div class="menu-item hidden-alt"><span>Espresso</span><span class="price">10 zł</span></div>
+            <div class="menu-item hidden-alt"><span>Wino Domowe (kieliszek)</span><span class="price">25 zł</span></div>
           </div>
         </div>
         <div id="reservation" class="grid grid-cols-[2fr,1fr] text-center place-items-center bg-yellow-50">

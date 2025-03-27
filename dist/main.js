@@ -40,11 +40,13 @@ function hiddenHandler(item) {
 }
 function handleSidebar(menu, menuButtons) {
     return __awaiter(this, void 0, void 0, function* () {
+        let viewportWidth = window.innerWidth || document.documentElement.clientWidth;
         if (!menu) {
             console.error('sidebar not found');
             return;
         }
-        else {
+        else if (!(viewportWidth >= 1024)) {
+            console.log("Shows ", viewportWidth);
             menu.classList.toggle('right-[-100vw]');
             menu.classList.toggle('right-0');
             menuButtons.forEach(hiddenHandler);
@@ -81,6 +83,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const menuToScroll = document.getElementById("menu");
     const reservation = document.getElementById("reservation");
     const contactInfo = document.getElementById("contactInfo");
+    const openingHoursBtn = document.getElementById("openingHoursBtn");
+    const locationBtn = document.getElementById("locationBtn");
+    const menuBtn = document.getElementById("menuBtn");
+    const reservationBtn = document.getElementById("reservationBtn");
+    const contactBtn = document.getElementById("contactBtn");
     openSidebar.addEventListener('click', () => {
         handleSidebar(sideMenu, sideMenuElements);
     });
@@ -104,6 +111,26 @@ document.addEventListener("DOMContentLoaded", () => {
         scrollHandler(reservation);
     });
     contact.addEventListener('click', () => {
+        handleSidebar(sideMenu, sideMenuElements);
+        scrollHandler(contactInfo);
+    });
+    openingHoursBtn.addEventListener('click', () => {
+        handleSidebar(sideMenu, sideMenuElements);
+        scrollHandler(hours);
+    });
+    locationBtn.addEventListener('click', () => {
+        handleSidebar(sideMenu, sideMenuElements);
+        scrollHandler(map);
+    });
+    menuBtn.addEventListener('click', () => {
+        handleSidebar(sideMenu, sideMenuElements);
+        scrollHandler(menuToScroll);
+    });
+    reservationBtn.addEventListener('click', () => {
+        handleSidebar(sideMenu, sideMenuElements);
+        scrollHandler(reservation);
+    });
+    contactBtn.addEventListener('click', () => {
         handleSidebar(sideMenu, sideMenuElements);
         scrollHandler(contactInfo);
     });

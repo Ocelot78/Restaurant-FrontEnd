@@ -1,4 +1,4 @@
 **/node_modules/
 **/.vscode/
 .prettierrc.json
-cmd.txt
+.cmd.txt
