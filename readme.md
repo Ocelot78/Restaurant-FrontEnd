@@ -3,7 +3,8 @@ A simple Front-End project.
 Made using tailwindCSS and Typescript.
 
 ## License
-Project is licensed under GNU GENERAL PUBLIC LICENSE Version 3
+Project is licensed under GNU GENERAL PUBLIC LICENSE Version 3 
+Please read License file for more info.
 
 ## Font
 License
