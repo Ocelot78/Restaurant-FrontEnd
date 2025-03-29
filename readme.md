@@ -2,6 +2,9 @@
 A simple Front-End project.
 Made using tailwindCSS and Typescript.
 
+## License
+Project is licensed under GNU GENERAL PUBLIC LICENSE Version 3
+
 ## Font
 License
 Copyright 2024 The Funnel Project Authors (https://github.com/Dicotype/Funnel)
