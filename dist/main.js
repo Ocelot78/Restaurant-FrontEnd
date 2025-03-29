@@ -90,7 +90,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const contactBtn = document.getElementById("contactBtn");
     const backButton = document.getElementById("back");
     const Welcome = document.getElementById("welcome");
-    const WelcomeLG = document.getElementById("welcomeLG");
     backButton.addEventListener('click', () => {
         handleSidebar(sideMenu, sideMenuElements);
         scrollHandler(Welcome);

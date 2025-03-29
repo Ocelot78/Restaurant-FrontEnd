@@ -74,7 +74,6 @@ document.addEventListener("DOMContentLoaded", () =>  {
     const contactBtn = document.getElementById("contactBtn") as HTMLElement;
     const backButton = document.getElementById("back") as HTMLElement;
     const Welcome = document.getElementById("welcome") as HTMLElement;
-    const WelcomeLG = document.getElementById("welcomeLG") as HTMLElement;
     backButton.addEventListener('click', () => {
         handleSidebar(sideMenu,sideMenuElements)
         scrollHandler(Welcome)
