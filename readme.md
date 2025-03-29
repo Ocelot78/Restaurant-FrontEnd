@@ -1,4 +1,6 @@
-
+## About
+A simple Front-End project.
+Made using tailwindCSS and Typescript.
 
 ## Font
 License
