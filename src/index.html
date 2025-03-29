@@ -13,7 +13,9 @@
   <body class="font-Funnel bg-yellow-500">
     <div class="grid h-full min-h-full w-full min-w-full relative lg:grid-cols-2">
       <nav id="navbar" class="sticky top-0 z-10 flex h-[9vh] w-full items-center justify-between bg-yellow-500 p-1 lg:col-span-2">
-        <img class="h-[90%]" src="images/pasta-e-basta-high-resolution-logo.png" alt="Pasta e basta" />
+        <button id="back" class="h-[90%]">
+          <img class="h-[100%]" src="images/pasta-e-basta-high-resolution-logo.png" alt="Pasta e basta" />
+        </button> 
         <button id="open-sidebar" class="h-[70%] lg:hidden">
           <img class="h-[100%]" src="images/menu_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg" alt="menu" />
         </button> 
@@ -37,11 +39,18 @@
           <button id="contact" class="menuButton h-10">Kontakt</button>
         </div>
       </aside>
-      <main class="grid lg:col-span-2">
-        <div id="photo" class="relative col-end-1">
-          <img src="images/aleksandra-tanasiienko-0y6eMd8vevA-unsplash.jpg" alt="Makaron" />
+      <main class="grid lg:grid-rows-1 lg:grid-cols-2 lg:col-span-2">
+        <div class="hidden lg:grid lg:place-items-center lg:mb-10 text-center">
+          <h1 id="welcomeLG" class="hidden-alt-2 text-center text-6xl font-bold text-black">
+            Witamy,<br />
+            w restauracji<br />
+            <img class="invert-100 text-6xl w-[60vw] m-auto justify-self-center" src="images/pasta-e-basta-high-resolution-logo.png" alt="Logo" />
+          </h1>
+        </div>
+        <div id="photo" class="relative col-span-1 lg:m-5">
+          <img class="border-0 rounded-xl" src="images/aleksandra-tanasiienko-0y6eMd8vevA-unsplash.jpg" alt="Makaron" />
           <div id="photoText" class="absolute top-0 left-0 mt-20 w-full text-center">
-            <h1 class="hidden-alt-2 text-center text-6xl font-bold text-black lg:col-start-2">
+            <h1 id="welcome" class="hidden-alt-2 text-center text-6xl font-bold text-black lg:hidden">
               Witamy,<br />
               w restauracji<br />
               <img class="invert-100 text-6xl w-[60vw] m-auto justify-self-center" src="images/pasta-e-basta-high-resolution-logo.png" alt="Logo" />
@@ -52,18 +61,18 @@
             <a href="https://unsplash.com/@tasikola_pl?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Aleksandra Tanasiienko</a>
           </div>
         </div>
-        <div id="hours" class="flex flex-col items-center justify-center bg-yellow-950 text-center text-2xl">
+        <div id="hours" class="flex flex-col items-center justify-center bg-yellow-950 text-center text-2xl lg:col-span-2">
           <h3 class="hidden-alt text-amber-600">Godziny Otwarcia</h3>
           <div class="hidden-alt text-lg text-yellow-50">
             <h4>Poniedziałek - Czwartek 09:00-23:00</h4>
             <h4>Piątek - Niedziela 12:00-00:00</h4>
           </div>
         </div>
-        <div id="location" class="bg-yellow-950">
+        <div id="location" class="bg-yellow-950 lg:col-span-2">
           <h2 class="hidden-alt text-center text-2xl font-bold text-amber-50">Nasza lokalizacja</h2>
-          <iframe class="hidden-alt max-w-full w-full h-[50vh]" src="https://www.google.com/maps/embed?..." allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <iframe id="map" class="hidden-alt max-w-full w-full h-[50vh]" src="https://www.google.com/maps/embed?..." allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
-        <div id="menuSection" class="text-lg text-neutral-800">
+        <div id="menu" class="text-lg text-neutral-800 lg:col-span-2">
           <div class="bg-yellow-500 grid">
             <h1 class="hidden-alt text-3xl justify-self-center p-3">Menu</h1>
           </div>
@@ -89,7 +98,7 @@
             <div class="menu-item hidden-alt"><span>Wino Domowe (kieliszek)</span><span class="price">25 zł</span></div>
           </div>
         </div>
-        <div id="reservation" class="grid grid-cols-[2fr,1fr] text-center place-items-center bg-yellow-50">
+        <div id="reservation" class="grid grid-cols-[2fr,1fr] text-center place-items-center bg-yellow-50 lg:col-span-2">
           <h2 class="text-3xl mt-1.5">Rezerwacja</h2>
           <input type="number" placeholder="Ilość osób" class="w-52 m-4 p-3 border-[0.2rem] rounded-lg" />
           <h2>Ilość osób</h2>
@@ -103,7 +112,7 @@
           <button class="bg-yellow-400 rounded-lg w-[50%] h-14 hover:bg-yellow-500 m-4">Rezerwuję</button>
         </div>
       </main>
-      <footer class="flex items-center justify-center bg-neutral-500 text-center">
+      <footer class="flex h-[10vh] items-center justify-center bg-neutral-500 text-center lg:col-span-2">
         <div id="contactInfo">
           <p>&#169; 2025 Pasta e Basta</p>
           <ul class="mt-2 flex justify-center space-x-6">

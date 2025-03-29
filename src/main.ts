@@ -72,6 +72,13 @@ document.addEventListener("DOMContentLoaded", () =>  {
     const menuBtn = document.getElementById("menuBtn") as HTMLElement;
     const reservationBtn = document.getElementById("reservationBtn") as HTMLElement;
     const contactBtn = document.getElementById("contactBtn") as HTMLElement;
+    const backButton = document.getElementById("back") as HTMLElement;
+    const Welcome = document.getElementById("welcome") as HTMLElement;
+    const WelcomeLG = document.getElementById("welcomeLG") as HTMLElement;
+    backButton.addEventListener('click', () => {
+        handleSidebar(sideMenu,sideMenuElements)
+        scrollHandler(Welcome)
+    })
     openSidebar.addEventListener('click', () => {
         handleSidebar(sideMenu, sideMenuElements)
     })
@@ -102,22 +109,18 @@ document.addEventListener("DOMContentLoaded", () =>  {
         handleSidebar(sideMenu, sideMenuElements)
         scrollHandler(hours)
     })
-      
     locationBtn.addEventListener('click', () => {
         handleSidebar(sideMenu, sideMenuElements)
         scrollHandler(map)
     })
-      
     menuBtn.addEventListener('click', () => {
         handleSidebar(sideMenu, sideMenuElements)
         scrollHandler(menuToScroll)
     })
-      
     reservationBtn.addEventListener('click',() => {
         handleSidebar(sideMenu, sideMenuElements)
         scrollHandler(reservation)
     })
-      
     contactBtn.addEventListener('click', () => {
         handleSidebar(sideMenu, sideMenuElements)
         scrollHandler(contactInfo)

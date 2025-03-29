@@ -88,6 +88,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const menuBtn = document.getElementById("menuBtn");
     const reservationBtn = document.getElementById("reservationBtn");
     const contactBtn = document.getElementById("contactBtn");
+    const backButton = document.getElementById("back");
+    const Welcome = document.getElementById("welcome");
+    const WelcomeLG = document.getElementById("welcomeLG");
+    backButton.addEventListener('click', () => {
+        handleSidebar(sideMenu, sideMenuElements);
+        scrollHandler(Welcome);
+    });
     openSidebar.addEventListener('click', () => {
         handleSidebar(sideMenu, sideMenuElements);
     });
