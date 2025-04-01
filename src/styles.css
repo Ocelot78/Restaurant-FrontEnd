@@ -27,9 +27,7 @@
   float: right;
   margin-right: 1%;
 }
-#menu {
-  background: url('src/images/photo-1603484477859-abe6a73f9366.avif') center center fixed;
-}
+
 .menu-item {  
   display: flex;
   justify-content: space-between;
