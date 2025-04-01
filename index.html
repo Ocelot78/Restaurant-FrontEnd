@@ -5,19 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="icon" type="image/x-icon" href="images/icon.ico" />
+    <link rel="icon" type="image/x-icon" href="src/images/icon.ico" />
     <link href="https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="/dist/styles.css" />
+    <link rel="stylesheet" href="dist/styles.css" />
     <title>Restauracja</title>
   </head>
   <body class="font-Funnel bg-yellow-500">
     <div class="grid h-full min-h-full w-full min-w-full relative lg:grid-cols-2">
       <nav id="navbar" class="sticky top-0 z-10 flex h-[9vh] w-full items-center justify-between bg-yellow-500 p-1 lg:col-span-2">
         <button id="back" class="h-[90%]">
-          <img class="h-[100%]" src="images/pasta-e-basta-high-resolution-logo.png" alt="Pasta e basta" />
+          <img class="h-[100%]" src="src/images/pasta-e-basta-high-resolution-logo.png" alt="Pasta e basta" />
         </button> 
         <button id="open-sidebar" class="h-[70%] lg:hidden">
-          <img class="h-[100%]" src="images/menu_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg" alt="menu" />
+          <img class="h-[100%]" src="src/images/menu_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg" alt="menu" />
         </button> 
         <div class="hidden lg:grid grid-cols-5 text-white p-2">
           <button id="openingHoursBtn" class="menuButton p-1 bg-neutral-700 h-10 mx-4 border-b-4 rounded-md border-b-neutral-800 hover:shadow-lg hover:shadow-neutral-800">Godziny Otwarcia</button>
@@ -29,7 +29,7 @@
       </nav>
       <aside id="sideMenu" class="grid grid-rows-[9vh_91vh] w-[75vw] fixed right-[-100vw] top-0 h-full bg-yellow-500 z-30 transition-all duration-900">
         <button id="close-sidebar" class="h-[70%] mt-3">
-          <img class="h-[100%]" src="images/menu_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg" alt="menu" />
+          <img class="h-[100%]" src="src/images/menu_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg" alt="menu" />
         </button>
         <div class="grid grid-rows-5 gap-0.5 text-2xl mt-10">
           <button id="openHoursScroll" class="menuButton h-10">Godziny Otwarcia</button>
@@ -44,16 +44,16 @@
           <h1 id="welcomeLG" class="hidden-alt-2 text-center text-6xl font-bold text-black">
             Witamy,<br />
             w restauracji<br />
-            <img class="invert-100 text-6xl w-[60vw] m-auto justify-self-center" src="images/pasta-e-basta-high-resolution-logo.png" alt="Logo" />
+            <img class="invert-100 text-6xl w-[60vw] m-auto justify-self-center" src="src/images/pasta-e-basta-high-resolution-logo.png" alt="Logo" />
           </h1>
         </div>
         <div id="photo" class="relative col-span-1 lg:m-5">
-          <img class="border-0 rounded-xl" src="images/aleksandra-tanasiienko-0y6eMd8vevA-unsplash.jpg" alt="Makaron" />
+          <img class="border-0 rounded-xl" src="src/images/aleksandra-tanasiienko-0y6eMd8vevA-unsplash.jpg" alt="Makaron" />
           <div id="photoText" class="absolute top-0 left-0 mt-20 w-full text-center">
             <h1 id="welcome" class="hidden-alt-2 text-center text-6xl font-bold text-black lg:hidden">
               Witamy,<br />
               w restauracji<br />
-              <img class="invert-100 text-6xl w-[60vw] m-auto justify-self-center" src="images/pasta-e-basta-high-resolution-logo.png" alt="Logo" />
+              <img class="invert-100 text-6xl w-[60vw] m-auto justify-self-center" src="src/images/pasta-e-basta-high-resolution-logo.png" alt="Logo" />
             </h1>
           </div>
           <div id="credit" class="absolute right-4 bottom-2 text-xs text-gray-100">
@@ -122,6 +122,6 @@
         </div>
       </footer>
     </div>
-    <script src="/dist/main.js"></script>
+    <script src="dist/main.js"></script>
   </body>
 </html>
