@@ -99,7 +99,7 @@
           </div>
         </div>
         <div id="reservation" class="grid grid-cols-[2fr,1fr] text-center place-items-center bg-yellow-50 lg:col-span-2">
-          <h2 class="text-3xl mt-1.5">Rezerwacja</h2>
+          <h2 class="text-3xl mt-6">Rezerwacja</h2>
           <input type="number" placeholder="Ilość osób" class="w-52 m-4 p-3 border-[0.2rem] rounded-lg" />
           <h2>Ilość osób</h2>
           <input type="datetime-local" class="w-52 m-4 p-3 border-[0.2rem] rounded-lg" />
@@ -109,7 +109,10 @@
           <div class="flex justify-center items-center space-x-5 m-4">
             <input type="checkbox" id="terms" /><label for="terms">Akceptuję warunki korzystania z serwisu.</label>
           </div>
-          <button class="bg-yellow-400 rounded-lg w-[50%] h-14 hover:bg-yellow-500 m-4">Rezerwuję</button>
+          <div class="flex justify-center items-center space-x-5 m-4 text-red-600">
+            <p class="text-xl">UWAGA! Zostanie wykonane połączenie na numer telefonu w celu weryfikacji.</p>
+          </div>
+          <button class="bg-yellow-400 rounded-lg w-[50%] h-14 hover:bg-yellow-500 m-6">Rezerwuję</button>
         </div>
       </main>
       <footer class="flex h-[10vh] items-center justify-center bg-neutral-500 text-center lg:col-span-2">
@@ -118,6 +121,7 @@
           <ul class="mt-2 flex justify-center space-x-6">
             <li><a href="#" class="transition-colors hover:text-gray-200">O nas</a></li>
             <li><a href="#" class="transition-colors hover:text-gray-200">Polityka prywatności</a></li>
+            <li><a href="#" class="transition-colors hover:text-gray-200">Kontakt</a></li>
           </ul>
         </div>
       </footer>
